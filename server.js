@@ -69,10 +69,9 @@ function gateKeeper(req, res, next) {
   const headerString = req.get('x-username-and-password');
   if (headerString){
     const userObj = queryString.parse(headerString);
+    console.log(USERS.find(element=>(element.userName===userObj.user && element.password===userObj.pass)));
     
-    for (let i=0;i<USERS.length;i++){
-      
-    }
+
   }
   
   next();
