@@ -66,7 +66,15 @@ const USERS = [
 function gateKeeper(req, res, next) {
   // your code should replace the line below
   //get request header
-  conosole.logreq.get('x-username-and-password')
+  const headerString = req.get('x-username-and-password');
+  if (headerString){
+    const userObj = queryString.parse(headerString);
+    
+    for (let i=0;i<USERS.length;i++){
+      
+    }
+  }
+  
   next();
 }
 
@@ -75,6 +83,9 @@ function gateKeeper(req, res, next) {
 // this endpoint returns a json object representing the user making the request,
 // IF they supply valid user credentials. This endpoint assumes that `gateKeeper` 
 // adds the user object to the request if valid credentials were supplied.
+
+app.use(gateKeeper);
+
 app.get("/api/users/me", (req, res) => {
   // send an error message if no or wrong credentials sent
   if (req.user === undefined) {
