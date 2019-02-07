@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Express challenge: gatekeeper middleware
 
 [GitHub](https://github.com/Thinkful-Ed/express-gatekeeper-middleware-challenge) | [Glitch](https://glitch.com/edit/#!/express-gatekeeper-middleware-challenge)
@@ -35,3 +36,6 @@ In order to parse the request header, you will need to use the `query-string` pa
 
 So in your middlware, you'll need to use it to get an object with the `user` and `pass` from the request header `x-username-and-password` (if this request header was sent at all!).
 
+=======
+# glitch-username-password
+>>>>>>> 2b076e90cce4b336716e03675887150841742ec6
