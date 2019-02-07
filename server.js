@@ -65,6 +65,8 @@ const USERS = [
 //     (aka, `req.user = matchedUser`)
 function gateKeeper(req, res, next) {
   // your code should replace the line below
+  //get request header
+  conosole.logreq.get('x-username-and-password')
   next();
 }
 
